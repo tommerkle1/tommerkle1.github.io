@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: tommerkle.com
+Token: c3440d18ea6b586da0a4022bdd2b5e746448be14a4feed196dc60dc8f232ba01
