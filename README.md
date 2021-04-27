@@ -1,5 +1,5 @@
-# tommerkle1.github.io
+# tommerkle.com
 
-personal website of tom merkle.
+personal website of tom merkle
 
 working on taking my mindback
