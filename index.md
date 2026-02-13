@@ -5,3 +5,9 @@ not all those who wander are lost
 
 building at [Hashbranch](https://www.hashbranch.com)
 
+---
+
+### writing
+
+**investing**
+- [COIN: The Reflexivity Arbitrage](/investing/coin) — Why Coinbase is mispriced as a Bitcoin derivative
