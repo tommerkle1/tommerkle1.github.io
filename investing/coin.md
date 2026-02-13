@@ -233,7 +233,6 @@ The reflexivity creates the opportunity. When [TOTAL](https://www.tradingview.co
 
 I like the stock.
 
-![I like the stock](https://i.imgflip.com/4xjg1v.png)
 
 ---
 
