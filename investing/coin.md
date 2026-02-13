@@ -85,7 +85,7 @@ The stock rallied **17.8%** the next day as the market recognized the "everythin
 
 ## The Circle/USDC Angle
 
-Coinbase owns a minority equity stake in Circle, the issuer of USDC — the second-largest stablecoin.[^1]
+Coinbase owns a minority equity stake in Circle, the issuer of USDC — the second-largest stablecoin.<sup>[1]</sup>
 
 **Current USDC stats:**
 - Market cap: **$73.2 billion** — [CoinMarketCap](https://coinmarketcap.com/currencies/usd-coin/)
@@ -96,7 +96,7 @@ Coinbase owns a minority equity stake in Circle, the issuer of USDC — the seco
 - **100%** of interest income on USDC held on Coinbase
 - **50/50 split** on USDC held elsewhere
 
-In practice: **Coinbase received ~$908M from Circle in 2024** — roughly 56% of Circle's $1.7B gross revenue.[^2]
+In practice: **Coinbase received ~$908M from Circle in 2024** — roughly 56% of Circle's $1.7B gross revenue.<sup>[2]</sup>
 
 **Why this matters:**
 
@@ -105,9 +105,6 @@ In practice: **Coinbase received ~$908M from Circle in 2024** — roughly 56% of
 2. **USDC is growing faster than USDT.** USDC outpaced USDT growth for two consecutive years (2024-2025). As institutional adoption accelerates, regulated stablecoins win.
 
 3. **Interest income scales with supply.** Every dollar of USDC growth means more revenue for Circle and Coinbase.
-
-[^1]: Coinbase acquired its stake in August 2023 when the Centre Consortium dissolved. Circle paid Coinbase $210M in stock to acquire Coinbase's 50% stake in Centre. Source: [The Block](https://www.theblock.co/post/349168/circle-paid-210-million-in-stock-to-acquire-coinbases-stake-in-centre-ipo-filing-reveals)
-[^2]: Sources: [Tanay Jaipuria S-1 Breakdown](https://www.tanayj.com/p/circle-s-1-breakdown), [Coin Metrics State of the Network #317](https://coinmetrics.substack.com/p/state-of-the-network-issue-317)
 
 ---
 
@@ -235,6 +232,13 @@ I like the stock.
 
 ![I like the stock](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHd3dGN5Mmg4bWlkOG41aWZpMTk2ZXQ5NnJqZHp1ZnZ2d2FuNDJqdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xBXWbB1p0WfQraQP6k/giphy.gif)
 
+---
+
+## Sources
+
+1. Coinbase acquired its equity stake in Circle in August 2023 when the Centre Consortium dissolved. Circle paid Coinbase $210M in stock to acquire Coinbase's 50% stake in Centre. Source: [The Block](https://www.theblock.co/post/349168/circle-paid-210-million-in-stock-to-acquire-coinbases-stake-in-centre-ipo-filing-reveals)
+
+2. Circle revenue sharing with Coinbase: [Tanay Jaipuria S-1 Breakdown](https://www.tanayj.com/p/circle-s-1-breakdown), [Coin Metrics State of the Network #317](https://coinmetrics.substack.com/p/state-of-the-network-issue-317)
 
 ---
 
@@ -242,6 +246,4 @@ I like the stock.
 
 *Last updated: February 13, 2026*
 
----
-
-[← Back to tommerkle.com](/)
+{% include footer.html %}
