@@ -1,0 +1,244 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Briefing — March 16, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+    --font-mono: 'IBM Plex Mono', 'SF Mono', Consolas, monospace;
+    --bg: #f7f6f3;
+    --surface: #ffffff;
+    --surface2: #f2f0ec;
+    --surface-elevated: #fffcf8;
+    --border: rgba(0,0,0,0.07);
+    --border-bright: rgba(0,0,0,0.13);
+    --text: #1a1714;
+    --text-dim: #7a7370;
+    --accent: #b45309;
+    --accent-dim: rgba(180,83,9,0.07);
+    --blue: #1d4ed8;
+    --blue-dim: rgba(29,78,216,0.07);
+    --red: #dc2626;
+    --red-dim: rgba(220,38,38,0.07);
+    --green: #16a34a;
+    --green-dim: rgba(22,163,74,0.07);
+    --yellow: #d97706;
+    --yellow-dim: rgba(217,119,6,0.07);
+    --gray-dim: rgba(0,0,0,0.04);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 15px; line-height: 1.6; min-height: 100vh; }
+  .container { max-width: 680px; margin: 0 auto; padding: 32px 20px 64px; }
+  .masthead { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 40px; padding-bottom: 24px; border-bottom: 1px solid var(--border-bright); }
+  .masthead-left h1 { font-size: 22px; font-weight: 700; letter-spacing: -0.3px; }
+  .masthead-left .date { font-size: 13px; color: var(--text-dim); margin-top: 2px; }
+  .masthead-right { text-align: right; }
+  .pill { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; padding: 3px 8px; border-radius: 20px; background: var(--green-dim); color: var(--green); }
+  .section { margin-bottom: 32px; }
+  .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .section-label { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--text-dim); white-space: nowrap; }
+  .section-rule { flex: 1; height: 1px; background: var(--border); }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; margin-bottom: 8px; }
+  .card-title { font-size: 12px; font-weight: 600; letter-spacing: 0.3px; text-transform: uppercase; color: var(--text-dim); margin-bottom: 6px; }
+  .card-body { font-size: 14px; color: var(--text); line-height: 1.55; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .stat { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; }
+  .stat-val { font-size: 22px; font-weight: 700; letter-spacing: -0.5px; font-family: var(--font-mono); }
+  .stat-label { font-size: 11px; color: var(--text-dim); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .stat-sub { font-size: 11px; color: var(--text-dim); margin-top: 1px; }
+  .email-item { display: flex; gap: 10px; padding: 10px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 6px; }
+  .email-item.urgent { border-left: 3px solid var(--red); }
+  .email-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--red); flex-shrink: 0; margin-top: 7px; }
+  .email-content { flex: 1; min-width: 0; }
+  .email-sender { font-size: 12px; font-weight: 600; color: var(--text-dim); }
+  .email-subject { font-size: 14px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .email-why { font-size: 12px; color: var(--text-dim); margin-top: 2px; }
+  .workout-day { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+  .workout-focus { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 10px; background: var(--accent-dim); color: var(--accent); border-radius: 20px; margin-bottom: 12px; }
+  .tip-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; margin-bottom: 8px; }
+  .tip-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--text-dim); margin-bottom: 4px; }
+  .tip-title { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+  .tip-body { font-size: 13px; color: var(--text-dim); line-height: 1.5; }
+  .overnight-item { font-size: 13px; color: var(--text-dim); padding: 8px 0; border-bottom: 1px solid var(--border); }
+  .overnight-item:last-child { border-bottom: none; }
+  .overnight-item code { font-family: var(--font-mono); font-size: 12px; background: var(--gray-dim); padding: 1px 5px; border-radius: 3px; color: var(--accent); }
+  .footer { font-size: 12px; color: var(--text-dim); margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); }
+  @keyframes fadeUp { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+  .animate { animation: fadeUp 0.35s ease both; animation-delay: calc(var(--i, 0) * 60ms); }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- MASTHEAD -->
+  <div class="masthead animate" style="--i:0">
+    <div class="masthead-left">
+      <h1>Morning Briefing</h1>
+      <div class="date">Monday, March 16, 2026 · Generated 2:15 PM (delayed — 8am run failed)</div>
+    </div>
+    <div class="masthead-right">
+      <span class="pill">Body battery 71</span>
+    </div>
+  </div>
+
+  <!-- VITALS -->
+  <div class="section animate" id="vitals" style="--i:1">
+    <div class="section-header">
+      <span class="section-label">Vitals &amp; Weather</span>
+      <div class="section-rule"></div>
+    </div>
+    <div class="stat-grid" style="margin-bottom:8px">
+      <div class="stat">
+        <div class="stat-val">86</div>
+        <div class="stat-label">Sleep score</div>
+        <div class="stat-sub">8.7h · 2.1h deep</div>
+      </div>
+      <div class="stat">
+        <div class="stat-val">45</div>
+        <div class="stat-label">Resting HR</div>
+        <div class="stat-sub">Low stress (29 avg)</div>
+      </div>
+      <div class="stat">
+        <div class="stat-val">2,238</div>
+        <div class="stat-label">Steps so far</div>
+        <div class="stat-sub">Goal: 10,000</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Weather</div>
+      <div class="card-body">57°F feels like 53°F, wind 6mph. High of 63°F today. Good afternoon for a walk — best window 2–5pm before it cools off.</div>
+    </div>
+  </div>
+
+  <!-- WORKOUT -->
+  <div class="section animate" id="workout" style="--i:2">
+    <div class="section-header">
+      <span class="section-label">Workout</span>
+      <div class="section-rule"></div>
+    </div>
+    <div class="card">
+      <div class="workout-day">Week 3 — Monday</div>
+      <div class="workout-focus">Back · Abs · Calves</div>
+      <div class="card-body" style="color:var(--text-dim);font-size:13px;">Week 3 exercises not available — PDF was purged before extraction. Progressive overload from Week 2 across all lifts. Body battery is 71 — good session ahead.</div>
+    </div>
+  </div>
+
+  <!-- EMAIL -->
+  <div class="section animate" id="email" style="--i:3">
+    <div class="section-header">
+      <span class="section-label">Inbox — 7 action items</span>
+      <div class="section-rule"></div>
+    </div>
+    <div class="email-item urgent">
+      <div class="email-dot"></div>
+      <div class="email-content">
+        <div class="email-sender">HelloSign / BitCap</div>
+        <div class="email-subject">BitCap Hosting Contract — awaiting your signature</div>
+        <div class="email-why">Signature required — don't let this sit</div>
+      </div>
+    </div>
+    <div class="email-item">
+      <div class="email-dot" style="background:var(--blue)"></div>
+      <div class="email-content">
+        <div class="email-sender">Robert Hyry · Vast.AI</div>
+        <div class="email-subject">Vast.AI Meeting — Links to GPU Info</div>
+        <div class="email-why">GPU deal context from call</div>
+      </div>
+    </div>
+    <div class="email-item">
+      <div class="email-dot" style="background:var(--blue)"></div>
+      <div class="email-content">
+        <div class="email-sender">Brandon Luedtke · Hashbranch</div>
+        <div class="email-subject">Re: Updated Invoice for January</div>
+        <div class="email-why">Internal — needs review/response</div>
+      </div>
+    </div>
+    <div class="email-item">
+      <div class="email-dot" style="background:var(--yellow)"></div>
+      <div class="email-content">
+        <div class="email-sender">Google Search Console</div>
+        <div class="email-subject">New reasons prevent pages from being indexed</div>
+        <div class="email-why">Likely ashlandintelligence.com — new pages may need sitemap</div>
+      </div>
+    </div>
+    <div class="email-item">
+      <div class="email-dot" style="background:var(--text-dim)"></div>
+      <div class="email-content">
+        <div class="email-sender">MeasureX</div>
+        <div class="email-subject">Collaboration with Fortris</div>
+        <div class="email-why">Inbound partnership inquiry</div>
+      </div>
+    </div>
+    <div class="email-item">
+      <div class="email-dot" style="background:var(--text-dim)"></div>
+      <div class="email-content">
+        <div class="email-sender">Typeform</div>
+        <div class="email-subject">New GPU/AI Facility Survey response</div>
+        <div class="email-why">Check for high-priority respondent</div>
+      </div>
+    </div>
+    <div class="email-item">
+      <div class="email-dot" style="background:var(--text-dim)"></div>
+      <div class="email-content">
+        <div class="email-sender">DC Blockchain Summit</div>
+        <div class="email-subject">Online Ticket Sales Close at Midnight</div>
+        <div class="email-why">Tonight deadline if relevant</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OVERNIGHT -->
+  <div class="section animate" id="overnight" style="--i:4">
+    <div class="section-header">
+      <span class="section-label">Overnight</span>
+      <div class="section-rule"></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Vault pages created</div>
+      <div class="card-body" style="display:flex;flex-direction:column;gap:6px;margin-top:6px;">
+        <div class="overnight-item"><code>concepts/octa.md</code> — OCTA imaging for AMD monitoring: detects choriocapillaris flow deficits 10–15 years before symptoms. Linked to your CFH, C3, ERCC6 risk gene stack. Includes how to request it at your next eye exam.</div>
+        <div class="overnight-item">Updated <code>mocs/health.md</code> and <code>concepts/macular-degeneration-risk.md</code> to link to new OCTA page.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEARN -->
+  <div class="section animate" id="learn" style="--i:5">
+    <div class="section-header">
+      <span class="section-label">Chess · Piano · Vocab</span>
+      <div class="section-rule"></div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-label">Chess</div>
+      <div class="tip-title">The Zwischenzug</div>
+      <div class="tip-body">An "in-between move" — instead of recapturing immediately, you play a surprising intermediate move (often a check or threat) that changes the position before recapturing. Most players miss it. When your opponent seems forced to recapture, look for a zwischenzug first.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-label">Piano</div>
+      <div class="tip-title">Voicing chords</div>
+      <div class="tip-body">In a chord, bring out the melody note (usually the top) by pressing it slightly firmer than the inner voices. The inner notes should support, not compete. Practice playing a chord and listening for the melody to "float" above the harmony.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-label">Vocab</div>
+      <div class="tip-title">vellichor <span style="font-size:12px;font-weight:400;color:var(--text-dim)">(VEL-ih-kor)</span></div>
+      <div class="tip-body">The strange wistfulness of used bookshops — the feeling of being surrounded by thousands of stories and lives you'll never have time to read. From <em>The Dictionary of Obscure Sorrows</em>.</div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer animate" style="--i:6">
+    Generated by Vector · <a href="/">tommerkle.com</a> · March 16, 2026 · Note: 8am run hit Anthropic 401 — generated manually at 2:15pm
+  </div>
+
+</div>
+</body>
+</html>
