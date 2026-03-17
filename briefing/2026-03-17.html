@@ -60,6 +60,23 @@ layout: null
   .footer { font-size: 12px; color: var(--text-dim); margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); }
   @keyframes fadeUp { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
   .animate { animation: fadeUp 0.35s ease both; animation-delay: calc(var(--i, 0) * 60ms); }
+  /* CTAs */
+  .cta-sticky { background: var(--red-dim); border: 1.5px solid var(--red); border-radius: 8px; padding: 14px 16px; margin-bottom: 8px; display: flex; gap: 12px; align-items: flex-start; }
+  .cta-sticky-icon { font-size: 20px; flex-shrink: 0; line-height: 1.4; }
+  .cta-sticky-body { flex: 1; }
+  .cta-sticky-title { font-size: 14px; font-weight: 700; color: var(--red); margin-bottom: 4px; }
+  .cta-sticky-text { font-size: 13px; color: var(--text-dim); margin-bottom: 8px; }
+  .cta-link { font-size: 13px; font-weight: 600; color: var(--red); text-decoration: none; }
+  .cta-link:hover { text-decoration: underline; }
+  .cta-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; margin-bottom: 6px; display: flex; gap: 12px; align-items: flex-start; }
+  .cta-badge { font-size: 10px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; padding: 2px 7px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; margin-top: 2px; }
+  .badge-red { background: var(--red-dim); color: var(--red); }
+  .badge-yellow { background: var(--yellow-dim); color: var(--yellow); }
+  .badge-gray { background: var(--gray-dim); color: var(--text-dim); }
+  .cta-card-body { flex: 1; }
+  .cta-card-title { font-size: 14px; font-weight: 600; margin-bottom: 3px; }
+  .cta-card-text { font-size: 12px; color: var(--text-dim); }
+  .cta-days { font-size: 11px; color: var(--text-dim); margin-top: 3px; }
 </style>
 </head>
 <body>
@@ -71,32 +88,58 @@ layout: null
       <div class="date">Tuesday, March 17, 2026</div>
     </div>
     <div class="masthead-right">
-      <span class="pill">Battery 12</span>
+      <span class="pill">Battery 79</span>
     </div>
   </div>
 
-  <div class="section animate" id="vitals" style="--i:1">
+  <div class="section animate" id="ctas" style="--i:1"><div class="section-header"><span class="section-label">Today's CTAs</span><div class="section-rule"></div></div>
+    <div class="cta-card">
+      <span class="cta-badge badge-red">HIGH</span>
+      <div class="cta-card-body">
+        <div class="cta-card-title">Remind Tom to order PreserVision AREDS 2</div>
+        <div class="cta-card-text">Tom needs to place the order</div>
+        <div class="cta-days">24d pending</div>
+      </div>
+    </div>
+    <div class="cta-card">
+      <span class="cta-badge badge-red">HIGH</span>
+      <div class="cta-card-body">
+        <div class="cta-card-title">Pitch deck narrative decision: rebuild around Merkle Standard?</div>
+        <div class="cta-card-text">Strategic narrative decision that affects the entire fundraising pitch. Must come from Tom.</div>
+        <div class="cta-days">14d pending</div>
+      </div>
+    </div>
+    <div class="cta-card">
+      <span class="cta-badge badge-yellow">MEDIUM</span>
+      <div class="cta-card-body">
+        <div class="cta-card-title">Redesign investment monitoring — smarter, resource-aware</div>
+        <div class="cta-card-text">Tom needs to decide: how active is he on COIN/OUST? Does he want daily 8-K alerts or just earnings-window coverage? What other tickers if any?</div>
+        <div class="cta-days">22d pending</div>
+      </div>
+    </div></div>
+
+  <div class="section animate" id="vitals" style="--i:2">
     <div class="section-header"><span class="section-label">Vitals &amp; Weather</span><div class="section-rule"></div></div>
     <div class="stat-grid">
       <div class="stat">
-        <div class="stat-val">None</div>
+        <div class="stat-val">89</div>
         <div class="stat-label">Sleep score</div>
-        <div class="stat-sub">Noneh · Noneh deep</div>
+        <div class="stat-sub">8.1h · 2.8h deep</div>
       </div>
       <div class="stat">
-        <div class="stat-val">50</div>
+        <div class="stat-val">44</div>
         <div class="stat-label">Resting HR</div>
-        <div class="stat-sub">Stress avg 23</div>
+        <div class="stat-sub">Stress avg 14</div>
       </div>
       <div class="stat">
-        <div class="stat-val">10</div>
+        <div class="stat-val">55</div>
         <div class="stat-label">Steps</div>
         <div class="stat-sub">0% of 10k goal</div>
       </div>
     </div>
     <div class="card">
       <div class="card-title">Weather — Boise</div>
-      <div class="card-body">33.5°F feels like 28.0°F, wind 2.2mph. High of 71.5°F today.</div>
+      <div class="card-body">42.5°F feels like 38.7°F, wind 1.6mph. High of 70.9°F today.</div>
     </div>
   </div>
 
@@ -105,67 +148,46 @@ layout: null
     <div class="card">
       <div class="workout-day">Week 3 — Monday</div>
       <div class="workout-focus">Back, Abs, Calves</div>
-      <div class="card-body" style="color:var(--text-dim);font-size:13px;">Body battery 12 — plan session accordingly.</div>
+      <div class="card-body" style="color:var(--text-dim);font-size:13px;">Body battery 79 — plan session accordingly.</div>
     </div>
   </div>
 
   <div class="section animate" id="email" style="--i:3">
-    <div class="section-header"><span class="section-label">Inbox — 12 action items</span><div class="section-rule"></div></div>
+    <div class="section-header"><span class="section-label">Inbox — 5 action items</span><div class="section-rule"></div></div>
     
     <div class="email-item">
       <div class="email-dot"></div>
       <div class="email-content">
-        <div class="email-sender">Stripe &lt;updates@e.stripe.com&gt;</div>
-        <div class="email-subject">Growing platform economies at Sessions 2026</div>
+        <div class="email-sender">Mark Wright &lt;markwright0912@gmail.com&gt;</div>
+        <div class="email-subject">Tom re-meet Drayton</div>
       </div>
     </div>
     <div class="email-item">
       <div class="email-dot"></div>
       <div class="email-content">
         <div class="email-sender">Google Cloud &lt;CloudPlatform-noreply@google.co</div>
-        <div class="email-subject">[Product Update] Google Cloud: Update to default resour</div>
+        <div class="email-subject">[Reminder] [Action Required] Update your business logic</div>
       </div>
     </div>
     <div class="email-item">
       <div class="email-dot"></div>
       <div class="email-content">
-        <div class="email-sender">Baseten Events &lt;cal-l76607AsonZ1F7F@calendar.</div>
-        <div class="email-subject">Registration approved for Inference and evals: AI after</div>
+        <div class="email-sender">AKINDO &lt;hey@akindo.io&gt;</div>
+        <div class="email-subject">💰$50,000 Grant: Build Privacy-by-Design dApps with Fhen</div>
       </div>
     </div>
     <div class="email-item">
       <div class="email-dot"></div>
       <div class="email-content">
-        <div class="email-sender">JP Hennessy &lt;jphennessy@user.luma-mail.com&gt;</div>
-        <div class="email-subject">Registration approved for Lightning AI Happy Hour @ GTC</div>
+        <div class="email-sender">Abel from Riverside &lt;marcom@riverside.fm&gt;</div>
+        <div class="email-subject">New: Grow your listeners with a website</div>
       </div>
     </div>
     <div class="email-item">
       <div class="email-dot"></div>
       <div class="email-content">
-        <div class="email-sender">Google Ads &lt;ads-account-noreply@google.com&gt;</div>
-        <div class="email-subject">Your account will soon require multi-factor authenticat</div>
-      </div>
-    </div>
-    <div class="email-item">
-      <div class="email-dot"></div>
-      <div class="email-content">
-        <div class="email-sender">Lambda Events &lt;cal-ihMe3l9h8QYkuak@calendar.l</div>
-        <div class="email-subject">Registration approved for AI After Dark @ NVIDIA GTC 20</div>
-      </div>
-    </div>
-    <div class="email-item">
-      <div class="email-dot"></div>
-      <div class="email-content">
-        <div class="email-sender">Plug and Play San Jose &lt;pnp-sj@calendar.luma-</div>
-        <div class="email-subject">You’re on the waitlist for GTC 2026 | Plug and Play Hap</div>
-      </div>
-    </div>
-    <div class="email-item">
-      <div class="email-dot"></div>
-      <div class="email-content">
-        <div class="email-sender">Arize AI &lt;arizeai@calendar.luma-mail.com&gt;</div>
-        <div class="email-subject">Registration pending approval for NVIDIA GTC 2026: AI B</div>
+        <div class="email-sender">eBay &lt;ebay@reply.ebay.com&gt;</div>
+        <div class="email-subject">Tom, come see what's new. Buy, sell, and save!</div>
       </div>
     </div>
   </div>
