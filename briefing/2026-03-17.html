@@ -1,0 +1,223 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Briefing — March 17, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+    --font-mono: 'IBM Plex Mono', 'SF Mono', Consolas, monospace;
+    --bg: #f7f6f3; --surface: #ffffff; --surface2: #f2f0ec;
+    --border: rgba(0,0,0,0.07); --border-bright: rgba(0,0,0,0.13);
+    --text: #1a1714; --text-dim: #7a7370;
+    --accent: #b45309; --accent-dim: rgba(180,83,9,0.07);
+    --blue: #1d4ed8; --blue-dim: rgba(29,78,216,0.07);
+    --red: #dc2626; --red-dim: rgba(220,38,38,0.07);
+    --green: #16a34a; --green-dim: rgba(22,163,74,0.07);
+    --yellow: #d97706; --yellow-dim: rgba(217,119,6,0.07);
+    --gray-dim: rgba(0,0,0,0.04);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 15px; line-height: 1.6; }
+  .container { max-width: 680px; margin: 0 auto; padding: 32px 20px 64px; }
+  .masthead { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 40px; padding-bottom: 24px; border-bottom: 1px solid var(--border-bright); }
+  .masthead-left h1 { font-size: 22px; font-weight: 700; letter-spacing: -0.3px; }
+  .masthead-left .date { font-size: 13px; color: var(--text-dim); margin-top: 2px; }
+  .pill { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; padding: 3px 8px; border-radius: 20px; background: var(--green-dim); color: var(--green); }
+  .section { margin-bottom: 32px; }
+  .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .section-label { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--text-dim); white-space: nowrap; }
+  .section-rule { flex: 1; height: 1px; background: var(--border); }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; margin-bottom: 8px; }
+  .card-title { font-size: 12px; font-weight: 600; letter-spacing: 0.3px; text-transform: uppercase; color: var(--text-dim); margin-bottom: 6px; }
+  .card-body { font-size: 14px; color: var(--text); line-height: 1.55; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 8px; }
+  .stat { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; }
+  .stat-val { font-size: 22px; font-weight: 700; letter-spacing: -0.5px; font-family: var(--font-mono); }
+  .stat-label { font-size: 11px; color: var(--text-dim); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .stat-sub { font-size: 11px; color: var(--text-dim); margin-top: 1px; }
+  .email-item { display: flex; gap: 10px; padding: 10px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 6px; }
+  .email-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); flex-shrink: 0; margin-top: 7px; }
+  .email-sender { font-size: 12px; font-weight: 600; color: var(--text-dim); }
+  .email-subject { font-size: 14px; font-weight: 500; }
+  .workout-day { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+  .workout-focus { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 10px; background: var(--accent-dim); color: var(--accent); border-radius: 20px; margin-bottom: 12px; }
+  .tip-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; margin-bottom: 8px; }
+  .tip-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--text-dim); margin-bottom: 4px; }
+  .tip-title { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+  .tip-body { font-size: 13px; color: var(--text-dim); line-height: 1.5; }
+  .overnight-item { font-size: 13px; color: var(--text-dim); padding: 8px 0; border-bottom: 1px solid var(--border); }
+  .overnight-item:last-child { border-bottom: none; }
+  .overnight-item code { font-family: var(--font-mono); font-size: 12px; background: var(--gray-dim); padding: 1px 5px; border-radius: 3px; color: var(--accent); }
+  .footer { font-size: 12px; color: var(--text-dim); margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); }
+  @keyframes fadeUp { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+  .animate { animation: fadeUp 0.35s ease both; animation-delay: calc(var(--i, 0) * 60ms); }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="masthead animate" style="--i:0">
+    <div class="masthead-left">
+      <h1>Morning Briefing</h1>
+      <div class="date">Tuesday, March 17, 2026</div>
+    </div>
+    <div class="masthead-right">
+      <span class="pill">Battery 12</span>
+    </div>
+  </div>
+
+  <div class="section animate" id="vitals" style="--i:1">
+    <div class="section-header"><span class="section-label">Vitals &amp; Weather</span><div class="section-rule"></div></div>
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="stat-val">None</div>
+        <div class="stat-label">Sleep score</div>
+        <div class="stat-sub">Noneh · Noneh deep</div>
+      </div>
+      <div class="stat">
+        <div class="stat-val">50</div>
+        <div class="stat-label">Resting HR</div>
+        <div class="stat-sub">Stress avg 23</div>
+      </div>
+      <div class="stat">
+        <div class="stat-val">10</div>
+        <div class="stat-label">Steps</div>
+        <div class="stat-sub">0% of 10k goal</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Weather — Boise</div>
+      <div class="card-body">33.5°F feels like 28.0°F, wind 2.2mph. High of 71.5°F today.</div>
+    </div>
+  </div>
+
+  <div class="section animate" id="workout" style="--i:2">
+    <div class="section-header"><span class="section-label">Workout</span><div class="section-rule"></div></div>
+    <div class="card">
+      <div class="workout-day">Week 3 — Monday</div>
+      <div class="workout-focus">Back, Abs, Calves</div>
+      <div class="card-body" style="color:var(--text-dim);font-size:13px;">Body battery 12 — plan session accordingly.</div>
+    </div>
+  </div>
+
+  <div class="section animate" id="email" style="--i:3">
+    <div class="section-header"><span class="section-label">Inbox — 12 action items</span><div class="section-rule"></div></div>
+    
+    <div class="email-item">
+      <div class="email-dot"></div>
+      <div class="email-content">
+        <div class="email-sender">Stripe &lt;updates@e.stripe.com&gt;</div>
+        <div class="email-subject">Growing platform economies at Sessions 2026</div>
+      </div>
+    </div>
+    <div class="email-item">
+      <div class="email-dot"></div>
+      <div class="email-content">
+        <div class="email-sender">Google Cloud &lt;CloudPlatform-noreply@google.co</div>
+        <div class="email-subject">[Product Update] Google Cloud: Update to default resour</div>
+      </div>
+    </div>
+    <div class="email-item">
+      <div class="email-dot"></div>
+      <div class="email-content">
+        <div class="email-sender">Baseten Events &lt;cal-l76607AsonZ1F7F@calendar.</div>
+        <div class="email-subject">Registration approved for Inference and evals: AI after</div>
+      </div>
+    </div>
+    <div class="email-item">
+      <div class="email-dot"></div>
+      <div class="email-content">
+        <div class="email-sender">JP Hennessy &lt;jphennessy@user.luma-mail.com&gt;</div>
+        <div class="email-subject">Registration approved for Lightning AI Happy Hour @ GTC</div>
+      </div>
+    </div>
+    <div class="email-item">
+      <div class="email-dot"></div>
+      <div class="email-content">
+        <div class="email-sender">Google Ads &lt;ads-account-noreply@google.com&gt;</div>
+        <div class="email-subject">Your account will soon require multi-factor authenticat</div>
+      </div>
+    </div>
+    <div class="email-item">
+      <div class="email-dot"></div>
+      <div class="email-content">
+        <div class="email-sender">Lambda Events &lt;cal-ihMe3l9h8QYkuak@calendar.l</div>
+        <div class="email-subject">Registration approved for AI After Dark @ NVIDIA GTC 20</div>
+      </div>
+    </div>
+    <div class="email-item">
+      <div class="email-dot"></div>
+      <div class="email-content">
+        <div class="email-sender">Plug and Play San Jose &lt;pnp-sj@calendar.luma-</div>
+        <div class="email-subject">You’re on the waitlist for GTC 2026 | Plug and Play Hap</div>
+      </div>
+    </div>
+    <div class="email-item">
+      <div class="email-dot"></div>
+      <div class="email-content">
+        <div class="email-sender">Arize AI &lt;arizeai@calendar.luma-mail.com&gt;</div>
+        <div class="email-subject">Registration pending approval for NVIDIA GTC 2026: AI B</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section animate" id="overnight" style="--i:4">
+    <div class="section-header"><span class="section-label">Overnight</span><div class="section-rule"></div></div>
+    <div class="card">
+      <div class="card-body" style="display:flex;flex-direction:column;">
+        <div class="overnight-item">OCEAN sprint: 6/8 tickets done, CLA-65 (DB migration) unassigned despite being unblocked since March 12</div>
+<div class="overnight-item">Fundraising: still no outreach emails sent (Euwyn ~16 days, GR1D ~26 days, investor drafts ready since March 6)</div>
+<div class="overnight-item">Security: Linear API key leaked 18 days ago (q069 — critical, still unrotated)</div>
+<div class="overnight-item">Ashland Intelligence: live and deploying, needs testimonials + hero copy work</div>
+<div class="overnight-item">Call intake questions (3-5 bullets — what do you automate, what's the pain, what's the budget)</div>
+<div class="overnight-item">Service menu (OpenClaw setup, workflow automation, custom agent, ongoing retainer)</div>
+<div class="overnight-item">Delivery checklist per engagement type</div>
+<div class="overnight-item">Testimonial ask script (timing, channel, format)</div>
+<div class="overnight-item">**q152** (AI_CAN_EXECUTE): Draft Ashland Intelligence client pipeline doc</div>
+<div class="overnight-item">**q153** (NEEDS_HUMAN): Tom assigns CLA-65 (DB migration) to Ken in Linear</div>
+<div class="overnight-item">**q154** (AI_CAN_EXECUTE): Add "Today's CTAs" module to generate_briefing.py from queue.json</div>
+<div class="overnight-item">**q155** (AI_CAN_EXECUTE): Create demo briefing page for ashlandintelligence.com sales</div>
+<div class="overnight-item">**q156** (AI_CAN_EXECUTE): Hardcode Linear API key CRITICAL alert into generate_briefing.py until q069 resolves</div>
+<div class="overnight-item"><code>concepts/agent-briefing-page-pattern.md</code> — Page-based morning briefing pattern</div>
+<div class="overnight-item"><code>work/research/ashland-intelligence.md</code> — Ashland Intelligence business context</div>
+<div class="overnight-item"><code>concepts/queue-system-lessons.md</code> — Queue automation lessons and what replaced it</div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="section animate" id="learn" style="--i:5">
+    <div class="section-header"><span class="section-label">Chess · Piano · Vocab</span><div class="section-rule"></div></div>
+    <div class="tip-card">
+      <div class="tip-label">Chess</div>
+      <div class="tip-title">The Zwischenzug</div>
+      <div class="tip-body">An in-between move — instead of recapturing immediately, play a surprising intermediate move (often a check or threat) that changes the position first. Most players miss it. When your opponent seems forced to recapture, look for a zwischenzug.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-label">Piano</div>
+      <div class="tip-title">Voicing chords</div>
+      <div class="tip-body">In a chord, bring out the melody note (usually the top) by pressing it slightly firmer than the inner voices. The inner notes should support, not compete. Practice playing a chord and listening for the melody to float above the harmony.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-label">Vocab</div>
+      <div class="tip-title">vellichor <span style="font-size:12px;font-weight:400;color:var(--text-dim)">(VEL-ih-kor)</span></div>
+      <div class="tip-body">The strange wistfulness of used bookshops — surrounded by thousands of stories you'll never have time to read. From <em>The Dictionary of Obscure Sorrows</em>.</div>
+    </div>
+  </div>
+
+  <div class="footer animate" style="--i:6">
+    Generated by Vector · <a href="/">tommerkle.com</a> · March 17, 2026
+  </div>
+
+</div>
+</body>
+</html>
