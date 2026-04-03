@@ -8,87 +8,7 @@ title: "COIN: The Reflexivity Arbitrage"
 *Why Coinbase is mispriced as a crypto derivative when it's actually a profitable infrastructure business*
 
 **Tom Merkle**  
-*Originally published: February 13, 2026*  
-*Last updated: April 3, 2026 at 12:00 PM MDT*
-
----
-
-## Update — April 3, 2026, 12:00 PM MDT
-
-*Seven weeks since publication. Here's what the data says. All market data as of April 2, 2026 close.*
-
-**Price action since thesis (Feb 13):** COIN $164.32 → $171.46 (+4.3%). BTC $69,107 → $66,699 (-3.5%). COIN outperforming BTC by ~8 points.
-
-**The 24-Month Correlation Analysis**
-
-The original thesis argued COIN is mispriced as a Bitcoin derivative. I now have 24 months of monthly data (April 2024 – March 2026) to test that claim. The results are worse than I described.
-
-COIN tracks BTC direction **87% of the time** (20 out of 23 months). But the leverage is asymmetric — and it's asymmetric in the wrong direction:
-
-- **When BTC goes up:** COIN amplifies 1.5x
-- **When BTC goes down:** COIN amplifies 1.9x
-
-That difference compounds into destruction. Over the pre-thesis period (April 2024 – January 2026), BTC returned +38.7%. COIN returned -4.5%. A **43-point underperformance gap** — entirely driven by COIN giving back more on drawdowns than it captures on rallies.
-
-**Key months that tell the story:**
-
-| Month | BTC | COIN | What Happened |
-|-------|-----|------|---------------|
-| Nov 2024 | +34.1% | +65.2% | Trump election rally |
-| Dec 2024 | -3.7% | -16.2% | Small BTC dip → COIN bloodbath |
-| Feb 2025 | -17.7% | -26.0% | Downturn amplification |
-| Mar 2025 | -2.1% | -20.1% | Worst ratio: 10x amplification |
-| Jun 2025 | +4.2% | +42.1% | S&P inclusion — COIN-specific catalyst |
-| Dec 2025 | -2.7% | -17.1% | Small dip → 6x amplification |
-
-Every small BTC drawdown becomes a COIN bloodbath. The upside spikes (Nov 2024, Jun 2025) are driven by COIN-specific catalysts — election regulatory hopes, S&P inclusion — not BTC price action. **When COIN outperforms, it's because of the business. When it underperforms, it's because of the BTC beta.**
-
-**Then something changed.**
-
-February 2026 — the month this thesis was published — was the first meaningful break in the pattern.
-
-BTC crashed -21.7%. COIN dropped only -9.7%.
-
-That's a **12-point outperformance in a down month.** In the prior 21 months, COIN had *never* outperformed BTC during a significant drawdown. It always amplified losses.
-
-March 2026: BTC +1.2%, COIN -0.7%. Roughly flat. No amplification either direction.
-
-Two months is not statistically significant. But the direction of the break is exactly what the thesis predicted: COIN building a floor from non-crypto revenue that limits downside when BTC drops.
-
-**What's driving the potential decoupling:**
-
-- **USDC market cap:** $73.2B → $77.3B (+5.6%), growing independent of BTC price
-- **x402 protocol:** Donated to Linux Foundation (April 2, 2026). Founding members include Google Cloud, Stripe, AWS, Visa, Cloudflare. AWS published reference architecture using x402 on Amazon Bedrock with Coinbase AgentKit.
-- **World ID + x402:** Sam Altman's World ID integrated with x402 for agent identity/payments — a "complete trust stack" for agentic commerce
-- **OCC bank charter:** Coinbase received conditional approval for a national trust charter (April 2, 2026), enabling direct custody services without banking partners
-- **Standard Chartered (April 1):** Reaffirmed $2T stablecoin market cap forecast for 2028, explicitly citing x402 and AI-agent payments as growth drivers
-- **Stablecoin velocity:** Doubled to 6x/month per Standard Chartered analysis
-
-**Q1 guidance:** Subscription & services revenue $550-630M. Next earnings: **May 7, 2026.**
-
-**Analyst consensus (updated):**
-- Rating: Moderate Buy
-- Average price target: ~$327 (range $185-$475)
-- Barclays cut forecast citing "narrower path to outperformance" — but that's the same reflexive target-chasing JPMorgan did pre-earnings in February
-
-**Updated scenarios:**
-
-| Scenario | Probability | COIN Outcome |
-|----------|-------------|--------------|
-| Reflexivity trap continues — COIN stays a leveraged BTC loser | 20% | $100-140 (if BTC bear extends) |
-| Revenue diversification gradually lowers downside beta to 1.0-1.2x | 50% | $250-350 (re-rating as "BTC + operating business") |
-| Agentic infrastructure + bank charter create independent valuation | 25% | $400-600 (PayPal decoupling from eBay analogy) |
-| Full bull cycle + infrastructure dominance | 5% | $800+ |
-
-The bear case probability went down. The evidence for thesis legs 2 (USDC), 3 (agentic), and 4 (subscription floor) strengthened materially since publication. The risk that hasn't changed: the market may not care about fundamentals for a long time.
-
-**Position:** Unchanged. 11 shares (~$1,886). Starter position. Will add if May 7 earnings confirm subscription trajectory and downside beta compression continues.
-
-**What would change my mind:** If the February-March decoupling reverts and COIN resumes 1.9x downside amplification on the next BTC drawdown, the reflexivity thesis is just hope, not data. That's the test.
-
----
-
-*Original thesis below, published February 13, 2026.*
+*February 2026*
 
 ---
 
@@ -322,8 +242,14 @@ I like the stock.
 
 ---
 
+---
+
+**Update:** [COIN Update: Testing the Reflexivity Thesis](/investing/coin-april-2026) (April 3, 2026) — 24-month backtest, catalyst tracker, and updated scenarios.
+
+---
+
 *Disclaimer: This is not financial advice. I own COIN and am biased. Do your own research.*
 
-*Originally published: February 13, 2026. Last updated: April 3, 2026 at 12:00 PM MDT.*
+*Published: February 13, 2026*
 
 {% include footer.html %}
