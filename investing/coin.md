@@ -8,13 +8,14 @@ title: "COIN: The Reflexivity Arbitrage"
 *Why Coinbase is mispriced as a crypto derivative when it's actually a profitable infrastructure business*
 
 **Tom Merkle**  
-*February 2026*
+*Originally published: February 13, 2026*  
+*Last updated: April 3, 2026 at 12:00 PM MDT*
 
 ---
 
-## April 2026 Update
+## Update — April 3, 2026, 12:00 PM MDT
 
-*Seven weeks since publication. Here's what the data says.*
+*Seven weeks since publication. Here's what the data says. All market data as of April 2, 2026 close.*
 
 **Price action since thesis (Feb 13):** COIN $164.32 → $171.46 (+4.3%). BTC $69,107 → $66,699 (-3.5%). COIN outperforming BTC by ~8 points.
 
@@ -323,6 +324,6 @@ I like the stock.
 
 *Disclaimer: This is not financial advice. I own COIN and am biased. Do your own research.*
 
-*Last updated: April 3, 2026*
+*Originally published: February 13, 2026. Last updated: April 3, 2026 at 12:00 PM MDT.*
 
 {% include footer.html %}
