@@ -11,3 +11,4 @@ building at [Hashbranch](https://www.hashbranch.com)
 
 **investing**
 - [COIN: The Reflexivity Arbitrage](/investing/coin) — Why Coinbase is mispriced as a Bitcoin derivative
+- [COIN Update: Testing the Reflexivity Thesis](/investing/coin-april-2026) — 24-month backtest and catalyst tracker (April 2026)
