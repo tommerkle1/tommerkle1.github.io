@@ -1,0 +1,313 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Briefing — April 9, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+    --font-mono: 'IBM Plex Mono', 'SF Mono', Consolas, monospace;
+    --bg: #f7f6f3; --surface: #ffffff; --surface2: #f2f0ec;
+    --border: rgba(0,0,0,0.07); --border-bright: rgba(0,0,0,0.13);
+    --text: #1a1714; --text-dim: #7a7370;
+    --accent: #b45309; --accent-dim: rgba(180,83,9,0.07);
+    --blue: #1d4ed8; --blue-dim: rgba(29,78,216,0.07);
+    --red: #dc2626; --red-dim: rgba(220,38,38,0.07);
+    --green: #16a34a; --green-dim: rgba(22,163,74,0.07);
+    --yellow: #d97706; --yellow-dim: rgba(217,119,6,0.07);
+    --gray-dim: rgba(0,0,0,0.04);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 15px; line-height: 1.6; }
+  .container { max-width: 680px; margin: 0 auto; padding: 32px 20px 64px; }
+  .masthead { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 40px; padding-bottom: 24px; border-bottom: 1px solid var(--border-bright); }
+  .masthead-left h1 { font-size: 22px; font-weight: 700; letter-spacing: -0.3px; }
+  .masthead-left .date { font-size: 13px; color: var(--text-dim); margin-top: 2px; }
+  .pill { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; padding: 3px 8px; border-radius: 20px; background: var(--green-dim); color: var(--green); }
+  .section { margin-bottom: 32px; }
+  .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .section-label { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--text-dim); white-space: nowrap; }
+  .section-rule { flex: 1; height: 1px; background: var(--border); }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; margin-bottom: 8px; }
+  .card-title { font-size: 12px; font-weight: 600; letter-spacing: 0.3px; text-transform: uppercase; color: var(--text-dim); margin-bottom: 6px; }
+  .card-body { font-size: 14px; color: var(--text); line-height: 1.55; }
+  .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 8px; }
+  .stat { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; }
+  .stat-val { font-size: 22px; font-weight: 700; letter-spacing: -0.5px; font-family: var(--font-mono); }
+  .stat-label { font-size: 11px; color: var(--text-dim); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .stat-sub { font-size: 11px; color: var(--text-dim); margin-top: 1px; }
+  .email-item { display: flex; gap: 10px; padding: 10px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 6px; }
+  .email-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); flex-shrink: 0; margin-top: 7px; }
+  .email-sender { font-size: 12px; font-weight: 600; color: var(--text-dim); }
+  .email-subject { font-size: 14px; font-weight: 500; }
+  .workout-day { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+  .workout-focus { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 10px; background: var(--accent-dim); color: var(--accent); border-radius: 20px; margin-bottom: 12px; }
+  .tip-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; margin-bottom: 8px; }
+  .tip-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--text-dim); margin-bottom: 4px; }
+  .tip-title { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+  .tip-body { font-size: 13px; color: var(--text-dim); line-height: 1.5; }
+  .overnight-item { font-size: 13px; color: var(--text-dim); padding: 8px 0; border-bottom: 1px solid var(--border); }
+  .overnight-item:last-child { border-bottom: none; }
+  .overnight-item code { font-family: var(--font-mono); font-size: 12px; background: var(--gray-dim); padding: 1px 5px; border-radius: 3px; color: var(--accent); }
+  .footer { font-size: 12px; color: var(--text-dim); margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); }
+  @keyframes fadeUp { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+  .animate { animation: fadeUp 0.35s ease both; animation-delay: calc(var(--i, 0) * 60ms); }
+  /* CTAs */
+  .cta-sticky { background: var(--red-dim); border: 1.5px solid var(--red); border-radius: 8px; padding: 14px 16px; margin-bottom: 8px; display: flex; gap: 12px; align-items: flex-start; }
+  .cta-sticky-icon { font-size: 20px; flex-shrink: 0; line-height: 1.4; }
+  .cta-sticky-body { flex: 1; }
+  .cta-sticky-title { font-size: 14px; font-weight: 700; color: var(--red); margin-bottom: 4px; }
+  .cta-sticky-text { font-size: 13px; color: var(--text-dim); margin-bottom: 8px; }
+  .cta-link { font-size: 13px; font-weight: 600; color: var(--red); text-decoration: none; }
+  .cta-link:hover { text-decoration: underline; }
+  .cta-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; margin-bottom: 6px; display: flex; gap: 12px; align-items: flex-start; }
+  .cta-badge { font-size: 10px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; padding: 2px 7px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; margin-top: 2px; }
+  .badge-red { background: var(--red-dim); color: var(--red); }
+  .badge-yellow { background: var(--yellow-dim); color: var(--yellow); }
+  .badge-gray { background: var(--gray-dim); color: var(--text-dim); }
+  .cta-card-body { flex: 1; }
+  .cta-card-title { font-size: 14px; font-weight: 600; margin-bottom: 3px; }
+  .cta-card-text { font-size: 12px; color: var(--text-dim); }
+  .cta-days { font-size: 11px; color: var(--text-dim); margin-top: 3px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="masthead animate" style="--i:0">
+    <div class="masthead-left">
+      <h1>Morning Briefing</h1>
+      <div class="date">Thursday, April 9, 2026</div>
+    </div>
+    <div class="masthead-right">
+      <span class="pill">Battery —</span>
+    </div>
+  </div>
+
+  <div class="section animate" id="ctas" style="--i:1"><div class="section-header"><span class="section-label">Today&#39;s CTAs</span><div class="section-rule"></div></div>
+    <div class="cta-sticky" style="background:var(--yellow-dim);border-color:var(--yellow);">
+      <div class="cta-sticky-icon">🔧</div>
+      <div class="cta-sticky-body">
+        <div class="cta-sticky-title" style="color:var(--yellow);">Assign CLA-65 (DB migration) to Ken</div>
+        <div class="cta-sticky-text">OCEAN sprint 6/8 done. CLA-65 unassigned 7+ days despite blocker resolved. Last gate before OCEAN ships.</div>
+        <a class="cta-link" href="https://linear.app/hashbranch/issue/CLA-65" target="_blank" style="color:var(--yellow);">Open CLA-65 →</a>
+      </div>
+    </div>
+    <div class="cta-card">
+      <span class="cta-badge badge-red">HIGH</span>
+      <div class="cta-card-body">
+        <div class="cta-card-title">Remind Tom to order PreserVision AREDS 2</div>
+        <div class="cta-card-text">Tom needs to place the order</div>
+        <div class="cta-days">47d pending</div>
+      </div>
+    </div>
+    <div class="cta-card">
+      <span class="cta-badge badge-yellow">MEDIUM</span>
+      <div class="cta-card-body">
+        <div class="cta-card-title">Redesign investment monitoring — smarter, resource-aware</div>
+        <div class="cta-card-text">Tom needs to decide: how active is he on COIN/OUST? Does he want daily 8-K alerts or just earnings-window coverage? What other tickers if any?</div>
+        <div class="cta-days">45d pending</div>
+      </div>
+    </div>
+    <div class="cta-card">
+      <span class="cta-badge badge-red">HIGH</span>
+      <div class="cta-card-body">
+        <div class="cta-card-title">GR1D decision point — send short ping or archive to quarterly. 28 days</div>
+        <div class="cta-card-text">Tom must decide: send Version B/C (60 seconds) or deprioritize to quarterly check-in.</div>
+        <div class="cta-days">19d pending</div>
+      </div>
+    </div></div>
+
+  <div class="section animate" id="deals" style="--i:2"><div class="section-header"><span class="section-label">Deal Pulse</span><div class="section-rule"></div></div>
+    <div style="font-size:13px;margin-bottom:10px;padding:8px 14px;background:var(--surface2);border-radius:6px;">
+      Pipeline: <span style="color:var(--green);font-weight:600;">1 green</span> · <span style="color:var(--red);font-weight:600;">3 red</span> <span style="font-size:11px;color:var(--text-dim);"> — pipeline needs fresh leads</span>
+    </div>
+    <div class="deal-item" style="display:flex;gap:10px;padding:10px 14px;background:var(--surface);border:1px solid var(--border);border-radius:8px;margin-bottom:6px;">
+      <div style="width:8px;height:8px;border-radius:50%;background:var(--red);flex-shrink:0;margin-top:7px;"></div>
+      <div style="flex:1;">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;">
+          <div style="font-size:14px;font-weight:600;">GR1D / Jamieson Hill</div>
+          <div style="font-size:11px;font-weight:600;padding:2px 7px;border-radius:20px;background:var(--red-dim);color:var(--red);">48d ago</div>
+        </div>
+        <div style="font-size:12px;color:var(--text-dim);margin-top:2px;">50-100MW, $20-50M</div>
+        <div style="font-size:12px;color:var(--text-dim);margin-top:2px;">→ Send re-engagement email (3 versions ready)</div>
+      </div>
+    </div>
+    <div class="deal-item" style="display:flex;gap:10px;padding:10px 14px;background:var(--surface);border:1px solid var(--border);border-radius:8px;margin-bottom:6px;">
+      <div style="width:8px;height:8px;border-radius:50%;background:var(--red);flex-shrink:0;margin-top:7px;"></div>
+      <div style="flex:1;">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;">
+          <div style="font-size:14px;font-weight:600;">Presidio Power / Jose</div>
+          <div style="font-size:11px;font-weight:600;padding:2px 7px;border-radius:20px;background:var(--red-dim);color:var(--red);">22d ago</div>
+        </div>
+        <div style="font-size:12px;color:var(--text-dim);margin-top:2px;">7-10MW TX greenfield</div>
+        <div style="font-size:12px;color:var(--text-dim);margin-top:2px;">→ Send follow-up email (2 versions ready)</div>
+      </div>
+    </div>
+    <div class="deal-item" style="display:flex;gap:10px;padding:10px 14px;background:var(--surface);border:1px solid var(--border);border-radius:8px;margin-bottom:6px;">
+      <div style="width:8px;height:8px;border-radius:50%;background:var(--red);flex-shrink:0;margin-top:7px;"></div>
+      <div style="flex:1;">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;">
+          <div style="font-size:14px;font-weight:600;">Brendan Morris</div>
+          <div style="font-size:11px;font-weight:600;padding:2px 7px;border-radius:20px;background:var(--red-dim);color:var(--red);">21d ago</div>
+        </div>
+        <div style="font-size:12px;color:var(--text-dim);margin-top:2px;">$12M bridge loan</div>
+        <div style="font-size:12px;color:var(--text-dim);margin-top:2px;">→ Tom approves final investment brief → template extraction</div>
+      </div>
+    </div>
+    <div class="deal-item" style="display:flex;gap:10px;padding:10px 14px;background:var(--surface);border:1px solid var(--border);border-radius:8px;margin-bottom:6px;">
+      <div style="width:8px;height:8px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:7px;"></div>
+      <div style="flex:1;">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;">
+          <div style="font-size:14px;font-weight:600;">Merkle Standard / Barry An</div>
+          <div style="font-size:11px;font-weight:600;padding:2px 7px;border-radius:20px;background:var(--green-dim);color:var(--green);">1d ago</div>
+        </div>
+        <div style="font-size:12px;color:var(--text-dim);margin-top:2px;">100-600MW, $10-30M commission</div>
+        <div style="font-size:12px;color:var(--text-dim);margin-top:2px;">→ NCA in Adam Griffith's hands — awaiting draft</div>
+      </div>
+    </div></div>
+
+  <div class="section animate" style="--i:2"><div class="section-header"><span class="section-label">Engineering Sprint</span><div class="section-rule"></div></div><div class="card"><div style="display:flex;justify-content:space-between;align-items:baseline;"><div class="card-title" style="margin-bottom:0;">CLA-111 — Finish LoD integration</div><div style="font-size:13px;font-weight:600;font-family:var(--font-mono);">5/5</div></div><div class="card-body" style="font-size:13px;margin-top:6px;">5/5 sub-tasks done · Parent: Deployed</div></div></div>
+
+  
+
+  <div class="section animate" id="vitals" style="--i:3">
+    <div class="section-header"><span class="section-label">Vitals &amp; Weather</span><div class="section-rule"></div></div>
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="stat-val">—</div>
+        <div class="stat-label">Sleep score</div>
+        <div class="stat-sub">—h · —h deep</div>
+      </div>
+      <div class="stat">
+        <div class="stat-val">—</div>
+        <div class="stat-label">Resting HR</div>
+        <div class="stat-sub">Stress avg —</div>
+      </div>
+      <div class="stat">
+        <div class="stat-val">0</div>
+        <div class="stat-label">Steps</div>
+        <div class="stat-sub">0% of 10k goal</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Weather — Boise</div>
+      <div class="card-body">42.1°F feels like 36.7°F, wind 2.8mph. High of 72.7°F today.</div>
+    </div>
+  </div>
+
+  <div class="section animate" id="workout" style="--i:2">
+    <div class="section-header"><span class="section-label">Workout</span><div class="section-rule"></div></div>
+    <div class="card">
+      <div class="workout-day">Week 3 — Monday</div>
+      <div class="workout-focus">Back, Abs, Calves</div>
+      <div class="card-body" style="color:var(--text-dim);font-size:13px;">Body battery — — plan session accordingly.</div>
+    </div>
+  </div>
+
+  <div class="section animate" id="email" style="--i:3">
+    <div class="section-header"><span class="section-label">Inbox — 10 action items</span><div class="section-rule"></div></div>
+    
+    <div class="email-item">
+      <div class="email-dot"></div>
+      <div class="email-content">
+        <div class="email-sender">Grafana Labs Team &lt;update@grafana.com&gt;</div>
+        <div class="email-subject">See the biggest Grafana announcements of the year—live</div>
+      </div>
+    </div>
+    <div class="email-item">
+      <div class="email-dot"></div>
+      <div class="email-content">
+        <div class="email-sender">Jenna McNulty &lt;hello@gigaenergy.com&gt;</div>
+        <div class="email-subject">April bitcoin update: NEW sites for sale + special deal</div>
+      </div>
+    </div>
+    <div class="email-item">
+      <div class="email-dot"></div>
+      <div class="email-content">
+        <div class="email-sender">Ideabrowser &lt;notifications@mail.ideabrowser.c</div>
+        <div class="email-subject">Idea of the Day: Boring business intel</div>
+      </div>
+    </div>
+    <div class="email-item">
+      <div class="email-dot"></div>
+      <div class="email-content">
+        <div class="email-sender">Ideabrowser &lt;hello@ideabrowser.com&gt;</div>
+        <div class="email-subject">my full playbook to start a business</div>
+      </div>
+    </div>
+    <div class="email-item">
+      <div class="email-dot"></div>
+      <div class="email-content">
+        <div class="email-sender">Claude Team &lt;no-reply@email.claude.com&gt;</div>
+        <div class="email-subject">Introducing Claude Managed Agents: Get to production 10</div>
+      </div>
+    </div>
+    <div class="email-item">
+      <div class="email-dot"></div>
+      <div class="email-content">
+        <div class="email-sender">"Ryan Deiss, Accidental MBA" &lt;connect@mail.ac</div>
+        <div class="email-subject">How to fix a "broken" business</div>
+      </div>
+    </div>
+    <div class="email-item">
+      <div class="email-dot"></div>
+      <div class="email-content">
+        <div class="email-sender">Malcolm Walton &lt;malcolm@gannettwealth.com&gt;</div>
+        <div class="email-subject">Tom Merkle | Quarterly Planning Meeting</div>
+      </div>
+    </div>
+    <div class="email-item">
+      <div class="email-dot"></div>
+      <div class="email-content">
+        <div class="email-sender">Brandon Luedtke &lt;brandon.luedtke@hashbranch.c</div>
+        <div class="email-subject">Re: Hashbranch Contract Renewal</div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <div class="section animate" id="overnight" style="--i:5">
+    <div class="section-header"><span class="section-label">Overnight</span><div class="section-rule"></div></div>
+    <div class="card">
+      <div class="card-body" style="display:flex;flex-direction:column;">
+        <div class="overnight-item">No overnight notes.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section animate" id="learn" style="--i:5">
+    <div class="section-header"><span class="section-label">Chess · Piano · Vocab</span><div class="section-rule"></div></div>
+    <div class="tip-card">
+      <div class="tip-label">Chess</div>
+      <div class="tip-title">The Zwischenzug</div>
+      <div class="tip-body">An in-between move — instead of recapturing immediately, play a surprising intermediate move (often a check or threat) that changes the position first. Most players miss it. When your opponent seems forced to recapture, look for a zwischenzug.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-label">Piano</div>
+      <div class="tip-title">Voicing chords</div>
+      <div class="tip-body">In a chord, bring out the melody note (usually the top) by pressing it slightly firmer than the inner voices. The inner notes should support, not compete. Practice playing a chord and listening for the melody to float above the harmony.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-label">Vocab</div>
+      <div class="tip-title">vellichor <span style="font-size:12px;font-weight:400;color:var(--text-dim)">(VEL-ih-kor)</span></div>
+      <div class="tip-body">The strange wistfulness of used bookshops — surrounded by thousands of stories you'll never have time to read. From <em>The Dictionary of Obscure Sorrows</em>.</div>
+    </div>
+  </div>
+
+  <div class="footer animate" style="--i:6">
+    Generated by Vector · <a href="/">tommerkle.com</a> · April 9, 2026
+  </div>
+
+</div>
+</body>
+</html>
